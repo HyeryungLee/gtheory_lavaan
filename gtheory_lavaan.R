@@ -1,5 +1,5 @@
  ################################################
- ##   Univariate G-theory anlaysis using SEM   ## 
+ ##   Univariate G-theory analysis using SEM   ## 
  ################################################
 
  ## Article: A Robust Indicator Mean-based Method 
