@@ -7,13 +7,14 @@
   #         within Structural Equation Modeling Frameworks
 
 
------------------------------------------------------------------------------
+
 ## Read me: 
  # After running the code for the 'gtheory_lavaan' function, 
  # provide your data and analaysis details in the functino call. 
  # Then, you can obtain the G-theory analysis results based on lavaan. 
  # To get the Monte-Carlo confidence intervals for G, global D coefficients, and 
  # variarnce components, use 'monteCarloCI' function from the semTools package.  
+
 
 ## Function: gtheory_lavaan(data, facet, d_n, method, estimator, parameterization)
 
@@ -38,6 +39,7 @@
   set.seed(123)
   monteCarloCI(Results, level=0.95) 
   
+
 
 ## gtheory_lavaan function code
 library(lavaan) 
