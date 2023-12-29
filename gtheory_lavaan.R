@@ -24,7 +24,7 @@
  #         Example: For a 2-facet design with variable names like "item1rater1", "item2rater1"..., 
  #         facet = c(f1 = "item", f2 = "rater")
  # d_n = number of conditions for each facet for the D-study. 
- # method = absolute error estimation method. Either "Jorgensen" or "indicator_mean"
+ # method = absolute error estimation method. Either "indicator_mean" or "Jorgensen"
  # estimator = SEM model estimation method such as "ULS", "WLSMV". See the lavaan function for alternative estimators.
  # parameterization = = metric setting when "WLSMV" estimator is used. Either "delta" or "theta"
  
