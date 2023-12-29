@@ -15,8 +15,7 @@
  # To get the Monte-Carlo confidence intervals for G, global D coefficients, and 
  # variarnce components, use 'monteCarloCI' function from the semTools package.  
 
-## Function: gtheory_lavaan
- # gtheory_lavaan(data, facet, d_n, method, estimator, parameterization)
+## Function: gtheory_lavaan(data, facet, d_n, method, estimator, parameterization)
 
 ## Arguments:
  # data = wide format data containing the observed variables in the model. 
