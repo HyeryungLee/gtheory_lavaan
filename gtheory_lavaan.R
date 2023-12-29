@@ -10,10 +10,10 @@
 
 ## Read me: 
  # After running the code for the 'gtheory_lavaan' function, 
- # provide your data and analaysis details in the functino call. 
+ # provide your data and analysis details in the function call. 
  # Then, you can obtain the G-theory analysis results based on lavaan. 
  # To get the Monte-Carlo confidence intervals for G, global D coefficients, and 
- # variarnce components, use 'monteCarloCI' function from the semTools package.  
+ # variance components, use 'monteCarloCI' function from the semTools package.  
 
 
 ## Function: gtheory_lavaan(data, facet, d_n, method, estimator, parameterization)
@@ -29,7 +29,7 @@
  # parameterization = metric setting when "WLSMV" estimator is used. Either "delta" or "theta"
  
 ## Example:
- # G-theory anlaysis results (lavaan object)
+ # G-theory analysis results (lavaan object)
   Results <- gtheory_lavaan(data= mydata, facet= c(f1="I", f2="O", f3="S"), 
                             d_n= c(12, 1, 4), method="indicator_mean", 
                             estimator="WLSMV", parameterization="theta")
