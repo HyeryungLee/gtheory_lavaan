@@ -1,0 +1,13 @@
+# Example code: 
+# Below is the code for a 3-facet design using the indicator mean method with ULS estimator. 
+# make sure to run the gtheory_lvaan function code first.
+
+# G-theory analysis results (lavaan object)
+Results <- gtheory_lavaan(data= mydata, facet= c(f1="I", f2="O", f3="S"),  # format of the variable names in this data: "O1S1I1", "O1S1I2"...
+                            d_n= c(12, 1, 4), method="indicator_mean",   # For the D-study, n_I'= 12, n_O'=1, n_S'=4
+                            estimator="ULS")
+
+# Monte Carlo confidence intervals for G, D coefficients, and variance components
+set.seed(123)
+output <- monteCarloCI(Results, level=0.95) # 95% confidence intervals 
+output[which(rownames(output)=="Gcoef"):nrow(output),]  # print the results 
