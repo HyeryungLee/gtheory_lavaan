@@ -37,7 +37,7 @@
  # Confidence intervals for G, D coefficients, and variance components
   library(semTools) 
   set.seed(123)
-  monteCarloCI(Results, level=0.95) 
+  monteCarloCI(Results, level=0.95) # level = numeric confidence level between 0-1
   
 
 
