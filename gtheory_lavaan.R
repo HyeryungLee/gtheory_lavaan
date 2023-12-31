@@ -9,11 +9,18 @@
 
 
 ## Read me: 
- # After running the code for the 'gtheory_lavaan' function, 
- # provide your data and analysis details in the function call. 
- # Then, you can obtain the G-theory analysis results based on lavaan. 
- # To get the Monte-Carlo confidence intervals for G, global D coefficients, and 
- # variance components, use 'monteCarloCI' function from the semTools package.  
+ # Steps for analyzing one-, two- and three-facet generalizability theory (G-theory) designs: 
+ # We have created code in R to simplify the process for analyzing the designs above.
+ # Running these analyses primarily entails using the 'gtheory_lavaan' function we have created. 
+ # Within the function call, you will identify the data source and specify details for the analysis. 
+ # The data source must be arranged using the “wide format” in which a separate row is 
+ # included for each person (or object of measurement), and a separate column is included for
+ # each variable. Analysis details include specification of: (a) names of each variable analyzed, 
+ # (b) names for each facet, (c) number of conditions for each facet, (d) estimation procedure, 
+ # and (e) method of parameterization when using WLSMV estimation. Results are derived 
+ # primarily from the lavaan package in R. Monte Carlo-based confidence intervals for G, global 
+ # D coefficients, and variance components are obtained using the 'monteCarloCI' function from 
+ # the semTools package. More specific details for running the analyses and an example follow.
 
 
 ## Function: gtheory_lavaan(data, facet, d_n, method, estimator, parameterization)
