@@ -40,8 +40,9 @@ for (i in 1:length(score.grid)) {
     ((VC_p + (mean - (cutscore[i,1]))^2 - ybar) + (total_vc - VC_p))
 }
 
-plot(cutscore, 
-     type="l",
-     xlab = "Cut Score", 
-     ylab = "D coefficient",
-     las=1)
+ggplot(cutscore, aes(x=score, y = D_coef)) + 
+  geom_line() + 
+  theme_bw() +
+  labs(y = "D coefficient", x = "Cut-score") + 
+  ylim(0.8, 1.00) +
+  scale_x_continuous(breaks=seq(1, 8, by=1))
