@@ -37,15 +37,25 @@
  
 ## Example:
  # G-theory analysis results (lavaan object)
-  Results <- gtheory_lavaan(data= mydata, facet= c(f1="I", f2="O", f3="S"), 
-                            d_n= c(12, 1, 4), method="indicator_mean", 
-                            estimator="WLSMV", parameterization="theta")
+  # 1-facet design
+   Results <- gtheory_lavaan(data= mydata, facet= c(f1="item"), 
+                            d_n= c(12), method="indicator_mean", 
+                            estimator="ULS")
+  # 2-facet design
+   Results <- gtheory_lavaan(data= mydata, facet= c(f1="item", f2="rater"), 
+                            d_n= c(12, 4), method="indicator_mean", 
+                            estimator="ULS")
+  # 3-facet design
+   Results <- gtheory_lavaan(data= mydata, facet= c(f1="item", f2="rater", f3="time"), 
+                            d_n= c(12, 4, 1), method="indicator_mean", 
+                            estimator="ULS")
 
  # Confidence intervals for G, D coefficients, and variance components
   library(semTools) 
   set.seed(123)
   monteCarloCI(Results, level=0.95) # level = numeric confidence level between 0-1
   
+
 
 
 ## gtheory_lavaan function code
