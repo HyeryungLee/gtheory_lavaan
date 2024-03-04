@@ -380,6 +380,14 @@ gtheory_lavaan<- function(data, facet, d_n, method="indicator_mean", estimator="
                  ordered=name, estimator= "WLSMV", parameterization="delta")
         }
       } else if (method=='Jorgensen'){
+       sumzero <- function(f) {
+          if (length(f)==1) {paste0("(", paste0("m_", grep(f, name, value = T), collapse =' + '), ")==0")
+          } else {
+            match1 <- grep(f$f1, name, value=T)
+            match2 <- grep(f$f2, match1, value=T)
+            paste0("(", paste0("m_", match2, collapse =' + '), ")==0")}}
+        paste0("m_", name[ncol(data)], " == -1*(", paste0("m_", name, collapse= ' + '), ")")
+        
         abs<-c("person~Mu*1", 
                paste0("p",ni,"~m_",ni,"*1"),
                paste0("p",no,"~m_",no,"*1"),
